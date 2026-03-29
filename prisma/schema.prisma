@@ -1,0 +1,19 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model NidiCertificate {
+  id           String   @id @default(cuid())
+  nidiNumber   String   @unique
+  ownerName    String
+  buildingType String?
+  capacity     String?
+  fileUrl      String   // Untuk Postgres, String secara default sudah cukup besar
+  status       String   @default("Laik Operasi")
+  createdAt    DateTime @default(now())
+}
