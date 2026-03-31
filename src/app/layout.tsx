@@ -2,8 +2,8 @@ import "./globals.css";
 import LayoutClient from "../components/LayoutClient";
 
 export const metadata = {
-  title: "Jasa Instalasi NIDI & SLO",
-  description: "Perusahaan jasa instalasi listrik, NIDI dan SLO terpercaya",
+  title: "PT Fortuna Solusi Group.",
+  description: "Perusahaan jasa instalasi listrik dan penerbitan NIDI terpercaya.",
 };
 
 export default function RootLayout({
