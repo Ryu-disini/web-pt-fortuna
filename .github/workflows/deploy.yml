@@ -24,6 +24,8 @@ jobs:
 
             cd ~/www/fortunasolusi.my.id/web-pt-fortuna
 
+            pm2 stop fortuna-web
+
             git stash
             git pull origin main
 
@@ -32,3 +34,5 @@ jobs:
             npm run build
 
             pm2 restart fortuna-web
+            
+            npm cache clean --force
